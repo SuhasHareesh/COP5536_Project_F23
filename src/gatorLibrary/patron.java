@@ -1,6 +1,6 @@
 package src.gatorLibrary;
 
-public class patron {
+public class Patron {
     
     private int patron_id;
     private int patron_priority;

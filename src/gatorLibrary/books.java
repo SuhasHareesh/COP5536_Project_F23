@@ -1,7 +1,7 @@
 package src.gatorLibrary;
 
 
-class books {
+class Books {
 
     private int     book_id;
     private String  book_name;
