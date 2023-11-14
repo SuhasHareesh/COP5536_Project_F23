@@ -1,4 +1,4 @@
-package src.gatorLibrary;
+package src.GatorLibrary;
 // public class treesRedBlack {
 
 
@@ -16,7 +16,7 @@ package src.gatorLibrary;
 // TODO
 // Revamp this whole class to suit the need of this assignment
 
-public class treesRedBlack<T extends Comparable<T>> {
+public class RedBlackTree<T extends Comparable<T>> {
 
   private static final boolean RED      = true;
   private static final boolean BLACK    = false;

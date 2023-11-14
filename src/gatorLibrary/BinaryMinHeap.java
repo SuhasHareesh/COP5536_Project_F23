@@ -1,4 +1,4 @@
-package src.gatorLibrary;
+package src.GatorLibrary;
 
 // public class BinaryMinHeap {
     
