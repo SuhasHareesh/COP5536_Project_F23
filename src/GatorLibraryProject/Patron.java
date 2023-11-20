@@ -1,19 +1,19 @@
-package src.GatorLibrary;
+package src.GatorLibraryProject;
 
 public class Patron {
     
     private int patron_id;
     private int patron_priority;
 
-    public  int GetPatronID (){
-        return 0;
+    public int GetPatronID (){
+        return patron_id;
     }
 
-    public  int GetPatronPriority() {
-        return 0;
+    public int GetPatronPriority() {
+        return patron_priority;
     }
 
-    public  boolean SetPatronDetails(int pPatronID, int pPatronPriority) {
+    public boolean SetPatronDetails(int pPatronID, int pPatronPriority) {
 
         patron_id = pPatronID;
         patron_priority = pPatronPriority;
