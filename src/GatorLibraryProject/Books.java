@@ -10,14 +10,16 @@ class Books {
     private int             borrowed_id;
     private ReservationHeap reservation_heap;
 
+    public int GetBookID() {
+        return book_id;
+    }
+
     public void AddNewBook(int pBookID, String pBookName, String pAuthorName, boolean pAvailStat) {
         book_id = pBookID;
         book_name = pBookName;
         author_name = pAuthorName;
         availability_status = pAvailStat;
         borrowed_id = 0;
-
-        // TODO: Add to the RBTree
     }
 
     public void DeleteBook(int pBookID) {
@@ -41,19 +43,26 @@ class Books {
         }
     }
 
-    public void PrintBook (int pBookID) {
+    public boolean IsBookAvailable() {
+        return availability_status;
+    }
 
-        // if (book exists in RBTree) {
-        //     System.out.println("Book ID = " + String.valueOf(book_id));
-        //     System.out.println("Title = " + book_name);
-        //     System.out.println("Author = " + author_name);
-        //     System.out.println("Availability = " + String.valueOf(book_id)); // Change this to boolean eval
-        //     System.out.println("Borrowed By = " + String.valueOf(book_id)); // PatronID/ None
-        //     System.out.println("Reservations = " + reservation_heap.GetCurrentReservations());
+    public void CreateReservation(int pPatronID, int pPatronPriority) {
+        Reservation res = new Reservation(pPatronID, pPatronPriority);
+        reservation_heap.InsertReservation(res);
+    }
 
-        // }
+    public void PrintBook () {
+
+        System.out.println("Book ID = " + String.valueOf(book_id));
+        System.out.println("Title = " + book_name);
+        System.out.println("Author = " + author_name);
+        System.out.println("Availability = " + String.valueOf(book_id)); // Change this to boolean eval
+        System.out.println("Borrowed By = " + String.valueOf(book_id)); // PatronID/ None
+        System.out.println("Reservations = " + reservation_heap.GetCurrentReservations());
 
     }
+
 
 }
 

@@ -20,7 +20,5 @@ public class Patron {
 
         return true;
 
-        // TODO Setup Exception Handling
-
     }
 }

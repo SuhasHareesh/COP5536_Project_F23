@@ -1,7 +1,5 @@
 package src.GatorLibraryProject;
 
-import src.GatorLibraryProject.Reservation;
-import java.util.Arrays;
 
 public class ReservationHeap {
 
@@ -35,7 +33,7 @@ public class ReservationHeap {
     private void BubbleUp(int idx) {
         int parent = (idx - 1) / 2;
         
-        while (idx > 0 && (res_heap[idx].GetPatronPriority() < res_heap[parent].GetPatronPriority())) {
+        while (idx > 0 && (res_heap[idx].CompareReservations(res_heap[parent]) < 0)) {
             Swap(parent, idx);
             idx = parent;
             parent = (idx - 1) / 2;
@@ -47,11 +45,11 @@ public class ReservationHeap {
         int right = 2 * idx + 2;
         int smallest = idx;
 
-        if (left < size && res_heap[left].GetPatronPriority() < res_heap[smallest].GetPatronPriority()) {
+        if (left < size && res_heap[left].CompareReservations(res_heap[smallest]) < 0) {
             smallest = left;
         }
 
-        if (right < size && res_heap[right].GetPatronPriority() < res_heap[smallest].GetPatronPriority()) {
+        if (right < size && res_heap[right].CompareReservations(res_heap[smallest]) < 0) {
             smallest = right;
         }
 
