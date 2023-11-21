@@ -45,7 +45,8 @@ class Books {
         if (book_id == pBookID) {
             String reservations = reservation_heap.GetCurrentReservations();
 
-            System.out.print("Book " + book_id + " is no longer available.");
+            System.out.println("Book " + book_id + " is no longer available.");
+            System.out.println("");
 
 
             // Outputs based on the number of reservations.
